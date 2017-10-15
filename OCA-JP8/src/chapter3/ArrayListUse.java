@@ -1,6 +1,7 @@
 package chapter3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayListUse {
@@ -48,7 +49,9 @@ public class ArrayListUse {
 		System.out.println("* newArr contains 2?: "+ newArrList.contains(2) );
 		System.out.println("* newArr contains Z?: "+ newArrList.contains("Z") );
 		
-		
+		/* (List) Arrays.asList() accepts varargs, in other words, infinite parameters
+		 */
+		List<Integer> varargList = Arrays.asList(1, 2, 3, 4);
 		
 	}
 

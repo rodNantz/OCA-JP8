@@ -10,7 +10,7 @@ public class StringBuilderUse {
 		
 		StringBuilder a = new StringBuilder("abc");
 		StringBuilder b = a.append("de");
-		b = b.append("f").append("g");
+		b.append("f").append("g");
 		
 		System.out.println("a = " + a);
 		System.out.println("b = " + b);
@@ -19,16 +19,16 @@ public class StringBuilderUse {
 		 * To create a different object, you must use the new() constructor
 		 */
 		b = new StringBuilder().append(a).reverse();
-		System.out.println("a = " + a);
+		System.out.println("\na = " + a);
 		System.out.println("b = " + b);
 		
 		//you can also create StringBuilder specifying expected size/capacity of object
 		StringBuilder x = new StringBuilder(35);
 		x.append("itaquaquecetuba de pinhamonhangaba");
-		x.insert(15, "batata");
+		x.insert(15, "batata".toUpperCase());
 		int i = x.indexOf("batata");
 		
-		System.out.println(i + " x = " + x);
+		System.out.println("\n" + i + " x = " + x);
 	}
 
 }
