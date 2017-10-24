@@ -19,13 +19,18 @@ public class Lambdas2nd {
 				a -> a.canSwim()	// short way
 				);
 		print(animals, 
-				// TODO optional type between parenthesis () and braces {}
-				(Animal a) -> { a.canSwim(); }	
+				/* Optional type between parenthesis () and braces {}
+				 * return keyword and ; are mandatory			
+				 */
+				(Animal a) -> { return a.canSwim(); }	
 				);
 
+		
+		
 	}
 
-	private static void print(List<Animal> animals, CheckTrait checker) {
+	
+	private static void print(List<Animal> animals, CheckTrait2 checker) {
 		for(Animal a : animals){
 			if(checker.test(a)){
 				System.out.println(a + " ");
@@ -35,6 +40,6 @@ public class Lambdas2nd {
 	
 }
 
-interface CheckTrait {
+interface CheckTrait2 {
 	boolean test(Animal ani);
 }
