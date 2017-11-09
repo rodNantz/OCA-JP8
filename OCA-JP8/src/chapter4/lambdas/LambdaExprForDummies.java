@@ -57,7 +57,7 @@ class CheckIfHopper implements CheckTrait {
 }
 
 class Animal {
-	private String species;
+	public String species;
 	private boolean canHop;
 	private boolean canSwim;
 	
