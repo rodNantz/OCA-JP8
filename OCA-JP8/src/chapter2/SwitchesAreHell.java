@@ -37,7 +37,9 @@ public class SwitchesAreHell {
 				break;
 				
 			/* Although 'lastName' is final, its value can be different
-			 * depending on what's passed on the method call. Not constant. */
+			 * depending on what's passed on the method call. Not constant, 
+			 * doesn't compile. 
+			 * */
 			case lastName:
 				id = 8;
 				break;
@@ -47,10 +49,11 @@ public class SwitchesAreHell {
 				id = 7;
 				break;
 
-			// It would be OK if switched value would an DayOfWeek Enum too
+			// It would be OK if switched value would an DayOfWeek Enum too.
 			case java.time.DayOfWeek.SUNDAY:
 				id = 15;
 				break;
+			
 		}
 		
 		System.out.println(firstName + " " + middleName + " " + lastName + ", " + suffix);
