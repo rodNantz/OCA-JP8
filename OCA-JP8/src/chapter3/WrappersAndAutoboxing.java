@@ -46,7 +46,26 @@ public class WrappersAndAutoboxing {
 		int izin = Integer.parseInt(sNumber);
 		Integer izao = Integer.valueOf(sNumber);
 		// inverting both works due to autoboxing.
-
+		
+		/* COMPARISON OPERATOR == WARNING
+		 * Wrappers are still reference types - comparing
+		 * two of them will result in FALSE.
+		 */
+		Integer w1 = 1;
+		Integer wOne = new Integer(1);
+		System.out.println("\nInteger wrappers comparison: " + (w1 == wOne) );
+		
+		// If you compare an Wrapper with a primitive, the result will be the expected.
+		int p = 1;
+		System.out.println("Int Wrapper n' primitive comparison: " + (w1 == p) );
+		
+		// 
+		byte b = 1;
+		Byte wb = 1;
+		System.out.println("Prim. byte and Wp Integer: " + (w1 == b) );
+		// Wrapper Integer and Wrapper Byte compare: will not compile
+		// System.out.println("\nWp Integer and Wp byte: " + (w1 == wb) );
+		
 	}
 
 }

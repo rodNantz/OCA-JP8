@@ -26,9 +26,17 @@ public class StringBuilderUse {
 		StringBuilder x = new StringBuilder(35);
 		x.append("itaquaquecetuba de pinhamonhangaba");
 		x.insert(15, "batata".toUpperCase());
-		int i = x.indexOf("batata");
+		int i = x.indexOf("BATATA");
 		
 		System.out.println("\n" + i + " x = " + x);
+		
+		/* sb.substring() ATTENTION
+		 * This StringBuildermethod returns a String, and 
+		 * DOESN'T MODIFIY the original StringBuilder! 
+		 */
+		System.out.println("\nsubstring: " + x.substring(15, 21)); // indexes 15 to 20 (21 is exclusive)
+		System.out.println(x);
+		
 	}
 
 }

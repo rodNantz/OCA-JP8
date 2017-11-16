@@ -7,7 +7,7 @@ public class ArithmOperatorsNumericPromotion {
 		Object obj;
 		
 		/*
-		 * 1. If two values have different types, tle less-wide 
+		 * 1. If two values have different types, the less-wide 
 		 * type will be cast to the widest type.
 		 */
 		

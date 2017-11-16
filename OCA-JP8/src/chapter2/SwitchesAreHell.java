@@ -12,6 +12,12 @@ public class SwitchesAreHell {
 		patti.peopleHaveThePower("Patti", lname);
 	}
 	
+	/** <pre>
+	 * Types allowed into a switch are:
+	 * * byte, char, short, int (and its wrapper types);
+	 * * String (since version 7)
+	 *  </pre> 
+	 */
 	public int peopleHaveThePower(String firstName, final String lastName){
 		String middleName = "Idunno";
 		final String suffix = "Ms";
