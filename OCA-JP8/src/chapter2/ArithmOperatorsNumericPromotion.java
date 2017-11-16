@@ -42,6 +42,11 @@ public class ArithmOperatorsNumericPromotion {
 		obj = (s / s2);
 		System.out.println( valType(s) + " / " + valType(s2) + " = " + valType(obj) );
 		
+		/* byte + short will result in a INT, because both are smaller types.
+		   therefore, below will not compile 	*/
+		short shallNotCompile = b + s;
+		int iCompile = b + s;
+				
 		/*
 		 * 4. After all promotions, resulting type will be the same of
 		 * the promoted operands

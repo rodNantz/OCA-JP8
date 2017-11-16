@@ -63,12 +63,36 @@ public class OtherOperators {
 		
 		/* MOD
 		 * This is an well-known operator, but let's see all its usage
-		 */
-		
+		 */		
 		int m = 15 % 10;
 		System.out.println("m = 15 % 10	 	// m value is "+ m);
 		
 		m %= 3;
 		System.out.println("m %= 3  		// m = 5 % 3 which is "+ m);
+		
+		
+		/* OPERATOR TRICKS
+		 * 1. Strings: Do you remember that when one of the operands is a String, 
+		 * the + has operator has different meaning, right? 
+		 */
+		String str = "I'm ";
+		boolean b = true;
+		str += b;
+		System.out.println(str);
+		// And using = would NOT compile. 
+		// str = b;	
+		
+		/* 2. char: is a tricky primitive, pay attention to it.
+		 */
+		char c = 'c';
+		c += 1;
+		System.out.println(c);
+		c *= new Integer(2);
+		System.out.println(c);	
+		/* And again, = would not compile without explicit casting, because it's a char. 
+		 * Review 'Numeric Promotion'. 	*/
+		int i = 1;
+		// c = i;
+		
 	}
 }
