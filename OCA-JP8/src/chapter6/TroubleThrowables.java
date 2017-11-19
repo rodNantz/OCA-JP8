@@ -6,6 +6,21 @@ public class TroubleThrowables {
 
 	public static void main(String[] args) {
 		
+		TroubleThrowables t = new TroubleThrowables();
+		try{ 
+			t.helloThrowables(0);
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		
+		try {
+			// declares throwing checked exception, needs to be caught/declared
+			t.noNeedToThrow();
+		} catch (MayNeverBeThrownException e){
+			e.printStackTrace();
+		}
+		
+		t.errorMineCamp();
 	}
 	
 	/* All the Errors and exceptions extend Throwable - and
@@ -59,4 +74,25 @@ public class TroubleThrowables {
 		System.out.println("so far so good");
 	}
 
+	public void errorMineCamp (){
+		System.out.println(ErrorDamned.i);
+	}
+	
+}
+
+class ErrorDamned {
+	static int i;
+	
+	/* ArithmeticException is thrown, but initializer actually throws an 
+	 * error, which is ExceptionInInitializerError.		*/
+	static {
+		i = 10 / 0;
+	}
+	
+	/* If you throw something explicitly, the compiler will
+	 * notice and will NOT COMPILE.
+	 */
+	static {
+		//throw new NullPointerException();
+	}
 }
