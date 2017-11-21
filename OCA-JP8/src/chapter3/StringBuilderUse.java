@@ -1,14 +1,13 @@
 package chapter3;
 
 public class StringBuilderUse {
-
-	public static void main(String[] args) {
-		
+	public static String abc = "abc"; 
+	
+	public static void main(String[] args) {	
 		/*
 		 * Objects A and B are the same, as we make B receive object A. 
 		 */
-		
-		StringBuilder a = new StringBuilder("abc");
+		StringBuilder a = new StringBuilder(abc);
 		StringBuilder b = a.append("de");
 		b.append("f").append("g");
 		

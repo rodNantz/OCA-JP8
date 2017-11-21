@@ -9,7 +9,10 @@ public class ArraysUsage {
 		int[] numbers2[];					// 2D
 		int[] notCool2[], notCool3[][];		// 2D and 3D 
 		String[][] twoByThree = new String[2][3];		
-				
+		
+		// This is not the right syntax!
+		// twoByThree[0,0] = "no good";
+		
 		twoByThree[0][0] = "not null";
 		twoByThree[0][2] = "me too";
 		// remeber the indexes are zero based - this is the last element
