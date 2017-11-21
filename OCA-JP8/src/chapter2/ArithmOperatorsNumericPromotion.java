@@ -44,7 +44,8 @@ public class ArithmOperatorsNumericPromotion {
 		
 		/* byte + short will result in a INT, because both are smaller types.
 		   therefore, below will not compile 	*/
-		short shallNotCompile = b + s;
+		
+		// short shallNotCompile = b + s;
 		int iCompile = b + s;
 				
 		/*
@@ -66,6 +67,35 @@ public class ArithmOperatorsNumericPromotion {
 		double d = 0xF;
 		
 		printe(b,s,c,i,l,f,d);
+		
+		
+		/* EXTRA - Assignment = operator
+		 */
+		int rr, oo, dd;
+		rr = oo = dd = 21; 		// they can be chained
+		System.out.println(rr + " " + oo + " " + dd);
+		
+		// Also, they have the least precedence between operators.
+		System.out.println(
+				oo = 1 + 2 * dd - 1
+				);
+		
+		
+		/*
+		 * But this will no compile!
+		 */
+		boolean b1, b2;
+		b1 = b2 = false;
+		if (b2 != b1 = !b2)
+			System.out.println("won't get here");
+		
+		/* First we would solve the != operator
+		 */
+		System.out.println(b2 != b1);
+		/* But then, we can't assign an value to a false!
+		 */
+		false = !b2;
+	
 		
 	}
 

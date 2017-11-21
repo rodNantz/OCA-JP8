@@ -68,34 +68,10 @@ public class OtherOperators {
 		System.out.println("m = 15 % 10	 	// m value is "+ m);
 		m %= 3;
 		System.out.println("m %= 3  		// m = 5 % 3 which is "+ m);
-<<<<<<< HEAD
+
 		// also with floating-point types
 		float f = 5.5f % 3;
 		System.out.println("5.5f % 3 == "+ f);
-
-		
-		/* OPERATOR TRICKS
-		 * 1. Strings: Do you remember that when one of the operands is a String, 
-		 * the + has operator has different meaning, right? 
-		 */
-		String str = "I'm ";
-		boolean b = true;
-		str += b;
-		System.out.println(str);
-		// And using = would NOT compile. 
-		// str = b;	
-		
-		/* 2. char: is a tricky primitive, pay attention to it.
-		 */
-		char c = 'c';
-		c += 1;
-		System.out.println(c);
-		c *= new Integer(2);
-		System.out.println(c);	
-		/* And again, = would not compile without explicit casting, because it's a char. 
-		 * Review 'Numeric Promotion'. 	*/
-		int i = 1;
-		// c = i;
 		
 		
 		/* EXTRA: Bitwise operators
@@ -110,7 +86,7 @@ public class OtherOperators {
 		int bwAnd = op1 & op2;
 		System.out.println(op1 +" & "+ op2 + " == \n\t"+ 
 							bwAnd + " == \n\t" + intToBinaryStrAddZeroes(bwAnd) );
-=======
+
 		
 		
 		/* OPERATOR TRICKS
@@ -135,7 +111,6 @@ public class OtherOperators {
 		 * Review 'Numeric Promotion'. 	*/
 		int i = 1;
 		// c = i;
->>>>>>> branch 'master' of https://github.com/rodtwo/OCA-JP8.git
 		
 	}
 	
