@@ -35,7 +35,19 @@ public class ForLoops {
 		for (String s : strs) {
 			System.out.print(s + "! ");
 		}
+		// String s can also be declared final!
+		for (final String s : strs)
+			System.out.print(" final "+ s +"!");
 		// p.s.: when there's only one statement, braces aren't required
+		
+		
+		/* EXTRA - Enhanced FOR: Using already initialized 
+		 * variable on the declaration part is not allowed!
+		 */
+		String st = null;
+		for (st : strs) {
+			System.out.print(st + "not allowed ");
+		}
 	}
 
 }
