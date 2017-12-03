@@ -4,11 +4,27 @@ package chapter3;
 public class ArraysUsage {
 	public static void main(String[] args) {
 		
+		/*
+		 * Multidimensional arrays are simply arrays inside arrays.
+		 * This concept is well explained on: 
+		 * http://faculty.ycp.edu/~dhovemey/spring2007/cs201/info/javaArrays.html
+		 */
+		
 		// different ways of declaring
-		int[][] numbers;					// 2D
-		int[] numbers2[];					// 2D
-		int[] notCool2[], notCool3[][];		// 2D and 3D 
-		String[][] twoByThree = new String[2][3];		
+		String[][] numbers = { {"1","2"}, {"3","4"} };	// 2D
+		int[] numbers2[];							// 2D
+		int[] notCool2[], notCool3[][];				// 2D and 3D 
+		String[][] twoByThree = new String[2][3];
+		
+		// Three-dimensional array
+		int stair = 5;
+		String triDim[][][] = new String[stair--][stair--][stair = 3];
+		System.out.println( triDim.length + ", " + triDim[0].length+", "+ triDim[0][0].length);
+		
+		triDim[0] = twoByThree;
+		triDim[1] = numbers;
+		triDim[2][2] = new String[] {"two","dim", "array", "yay"};
+		printArray("triDim", triDim);
 		
 		// This is not the right syntax!
 		// twoByThree[0,0] = "no good";
@@ -52,8 +68,20 @@ public class ArraysUsage {
 	
 	/* ... */
 	
+	public static void printArray(String arrayName, Object[][][] triDarray){
+		System.out.println("\n"+ "array " + arrayName + ":");	
+		int i = 0;
+		for (Object[][] twoDarray : triDarray) {
+			System.out.println(arrayName + "["+ i + "]");
+			printArray(null, twoDarray);
+			i++;
+		}
+		System.out.println();
+	}
+	
 	public static void printArray(String arrayName, Object[][] array){
-		System.out.println("array " + arrayName + ":");		
+		if(arrayName != null)
+			System.out.println("array " + arrayName + ":");		
 		// 1st array dimension - or iterating over R "rows"
 		for (int r = 0; r < array.length; r++) {
 			System.out.print("\t");
@@ -64,7 +92,8 @@ public class ArraysUsage {
 			}
 			System.out.println();
 		}
-		System.out.println();
+		if(arrayName != null)
+			System.out.println();
 	}
 	
 	public static void printArrayEnhancedly(String arrayName, Object[][] twoDarray){

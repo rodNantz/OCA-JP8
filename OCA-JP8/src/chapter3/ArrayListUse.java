@@ -53,6 +53,11 @@ public class ArrayListUse {
 		 */
 		List<Integer> varargList = Arrays.asList(1, 2, 3, 4);
 		
+		// some list methods:
+		System.out.println( varargList.contains("1") );					// takes any Object, returns boolean
+		System.out.println( varargList.get(varargList.size() -1) );		// takes an int, returns Generic T object in that position.
+		System.out.println( varargList.indexOf("4") );   				// takes any Object, returns int, -1 if not found
+		
 	}
 
 }

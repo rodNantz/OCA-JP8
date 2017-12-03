@@ -66,6 +66,19 @@ public class WrappersAndAutoboxing {
 		// Wrapper Integer and Wrapper Byte compare: will not compile
 		// System.out.println("\nWp Integer and Wp byte: " + (w1 == wb) );
 		
+		
+		/* WRAPPER METHODS
+		 */
+		float f = Float.parseFloat("1.2");	// - parse() methods return primitive and takes a String
+		Float fw = Float.valueOf("1.3");	// - valueOf() methods return a Wrapper type, and 
+		fw = Float.valueOf(f);				//   take a String or a primitive type.
+		f = fw.floatValue();				// - xxxValue() returns the primitive of a Wrapper. 
+
+		// The wrappers also hold some constants, which most are valid primitive values. 
+		System.err.println(Float.NaN +" "+ Double.NaN);
+		System.err.println(Float.NEGATIVE_INFINITY +" "+ Double.POSITIVE_INFINITY);
+		
+		
 	}
 
 }

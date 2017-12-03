@@ -13,7 +13,9 @@ public class DateAndTime {
 		 * always using static methods.
 		 */
 		LocalDate date = LocalDate.of(1995, Month.SEPTEMBER, 21);
-		LocalTime time = LocalTime.of(3, 31);
+		LocalTime time = LocalTime.of(3, 31, 59, 99);
+		System.out.println(time);
+		time = LocalTime.of(3, 30);
 		LocalDateTime dateTime;
 		
 		/* Also, you do not change them directly, only getting the return

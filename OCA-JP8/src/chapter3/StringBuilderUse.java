@@ -36,6 +36,46 @@ public class StringBuilderUse {
 		System.out.println("\nsubstring: " + x.substring(15, 21)); // indexes 15 to 20 (21 is exclusive)
 		System.out.println(x);
 		
+		/*
+		 * DIFF - String and StringBuilder
+		 */
+		String str = "Potato";
+		b = new StringBuilder(str);
+		// String has the concat() method
+		str.concat(" head");						// str.append("wrong");
+		// StringBuilder has the append() method
+		b.append(" chips");
+		
+		// However, String is immutable
+		System.err.println(str);
+		System.err.println(b);		
+		// So, you have to do something with the object returned
+		str = str.concat(" fish");
+		str = str + " and chips"; 	// works the same way as concat
+		System.err.println(str);
+		
+		// starts/endsWith(str): only String 
+		str.startsWith("no");
+		// b.startsWith("method does not exist");
+		
+		// substring(int, int): both
+		str.substring(5);
+		b.substring(5);
+		
+		// charAt(int): both
+		str.charAt(0);
+		b.charAt(0);
+		
+		// to_____Case: String only
+		str.toUpperCase();
+		// b.toUpperCase();
+		
+		/*
+		 * Usually, String has more useful methods than StringBuilder,
+		 * which isn't a problem because you can use them when using
+		 * stringBuilder.toString() method.
+		 */
+	
 	}
 
 }

@@ -1,5 +1,8 @@
 package chapter3;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class StringUsage {
 
 	public static void main(String[] args) {
@@ -49,6 +52,36 @@ public class StringUsage {
 		 * even using a variable.							   */
 		System.out.println("5" + (hello == ("Hel"+lo).intern()) );
 		
+		/* Tricks or treats (no treats but threats)
+		 */
+		String String = "string is a string";
+		// Class names are not at all Java keywords! But, of course, terrible practice.
+		MyCreatedClass MyCreatedClass = new MyCreatedClass();
+		
+		// But, we can then create some conflicts. e.g:
+		// LocalDate LocalDate = LocalDate.now();
+		/* Above, local variable takes precedence over class name, and
+		 * we're not using the class name to call the static method. 
+		 * This would not conflict using full path class:			*/
+		LocalDateTime LocalDateTime = java.time.LocalDateTime.now();
+		
+		
+		/* Nice tips to remember reserved keywords: 
+		 */
+		
+		// No keyword has upper case letters!
+		Object Null = new Object();
+		
+		// Primitives are all reserved keywords, but wrappers are not (as any other class);
+		// Short short = new Short((short) 10);
+		Long Long = new Long(42);
+		
+		// Also, modifiers and boolean literals and also null are all reserved.
+		
 	}
 
+}
+
+class MyCreatedClass{
+	static final String HI = "Hi"; 
 }
