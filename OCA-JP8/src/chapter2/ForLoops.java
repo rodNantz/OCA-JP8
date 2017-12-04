@@ -27,6 +27,13 @@ public class ForLoops {
 		}
 		System.out.println("out: "+ i + " " + j);
 		
+		//Syntax
+		for (
+				i = 3, j = 0, begin = true;						// Mind the initializers syntax! Declare new, multiple variables or use existing ones!				
+				j < i && begin; 								// Single boolean expression
+				++j, i--, System.out.println("Post-potato")		// increment block - which actually can hold any statements, separated by comma.
+			) 
+			System.out.println("Hi");
 		
 		
 		/* enhanced for loop
@@ -45,9 +52,11 @@ public class ForLoops {
 		 * variable on the declaration part is not allowed!
 		 */
 		String st = null;
+		/*
 		for (st : strs) {
 			System.out.print(st + "not allowed ");
 		}
+		*/
 	}
 
 }
