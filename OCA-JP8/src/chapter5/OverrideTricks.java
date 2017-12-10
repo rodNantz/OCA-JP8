@@ -4,11 +4,18 @@ class ShadowMonster {
 	protected void move(){
 		System.out.println("Wooooooooooofff");
 	}
+	void parentOnly(){
+		System.out.println("Chatty monster");
+	}
 }
 
 class DemoDog extends ShadowMonster {
-	protected void move(){
+	public void move(){
 		System.out.println("Wraaaaaah");
+	}
+	
+	void childOnly(){
+		System.out.println("Silent dog");
 	}
 }
 
@@ -25,6 +32,14 @@ public class OverrideTricks {
 		 */
 		ShadowMonster what = new DemoDog();
 		what.move();
+		
+		/* And, what if, using parent class and child object,
+		 * we use a method defined only in the child? 
+		 */
+		// what.childOnly();		// does not compile
+		
+		// However, it's allowed if defined only in the parent.
+		what.parentOnly();
 	}
 
 }
