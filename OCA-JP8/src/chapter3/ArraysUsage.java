@@ -10,6 +10,28 @@ public class ArraysUsage {
 		 * http://faculty.ycp.edu/~dhovemey/spring2007/cs201/info/javaArrays.html
 		 */
 		
+		
+		/* Arrays cannot be initialized with 'new' and with both empty 
+		 * sizes - you either declare at least one size or use an
+		 * array initializer.
+		 */
+		// int[][] a = new int[ ][ ];			// won't compile	
+		int[][] b = { {1, 2 , 3}, {4,5} };
+		
+		/* They can be declared partially, at least one size declared,
+		 * from left to right.
+		 */
+		int[][] f = new int[3][ ];
+		int[][][] k = new int[3][ ][ ];
+		int[][][] l = new int[3][4][ ];
+		
+		/* But they cannot be declared with missing size when
+		 * some size of the right side is filled!
+		 */
+		int[][] x = new int[3][4] ;
+		// int[ ][ ] y = new int[ ][4] ;
+		// int[][][] z = new int[3][ ][5] ;
+		
 		// different ways of declaring
 		String[][] numbers = { {"1","2"}, {"3","4"} };	// 2D
 		int[] numbers2[];							// 2D
